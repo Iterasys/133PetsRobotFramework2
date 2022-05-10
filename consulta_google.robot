@@ -26,13 +26,13 @@ Acessar o ${browser} na pagina <${url}>
     open browser  ${url}    ${browser}
 
 Digitar "${palavra_chave}" na pesquisa
-    Set Test variable  ${palavra_chave}
+    Set Test variable   ${palavra_chave}
     input text      name = q        ${palavra_chave}
     press keys      name = q        ENTER
 
 Validar se aparece no titulo da guia o resultado esperado
     ${titulo}       get title
-    Should contain  ${titulo}         ${palavra_chave}
+    Should contain  ${titulo}   Ovos de Páscoa
 
 Fechar o browser
     close browser
